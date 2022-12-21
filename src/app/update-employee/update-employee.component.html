@@ -1,0 +1,83 @@
+<br><br><br><br>
+<section class="home-section">
+    <div style="margin-left: 180px;">
+<div class="container" style="margin-top :10px;">
+    <div class="row">
+        <div class="col-md-11" style="border:.1px solid black; border-radius: 4px; top: 10px;">
+            <h3 style="text-align: center; margin-top: 4%;margin-bottom: 4%;"><b> EDIT EMPLOYEE DETAILS </b> </h3>
+            <form [formGroup]='employeeFormGroup'>
+                <div class="form-horizontal">
+                    <div class="row">
+                        <label class="control-label col-12" for="society"> Employee Id</label>
+                        <div class="col-12">
+                            <input type="text" class="form-control" formControlName="empid"
+                                placeholder="Enter the Employee Id" />
+                            <label *ngIf="employeeFormGroup.controls.empid?.errors?.required && savestatus"
+                                class="txt-danger">*</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="control-label col-12" for="society"> Employee Name</label>
+                        <div class="col-12">
+                            <input type="text" class="form-control" formControlName="empname"
+                                placeholder="Enter the Employee name" />
+                            <label *ngIf="employeeFormGroup.controls.empname?.errors?.required && savestatus"
+                                class="txt-danger">*</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="control-label col-12" for="society"> Designation</label>
+                        <div class="col-12">
+                            <input type="text" class="form-control" formControlName="designation"
+                                placeholder="Enter the Designation" />
+                            <label *ngIf="employeeFormGroup.controls.designation?.errors?.required && savestatus"
+                                class="txt-danger">*</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="control-label col-12" for="society">Place</label>
+                        <div class="col-12">
+                            <input type="text" class="form-control" formControlName="place"
+                                Placeholder="Enter the Place" />
+                            <label *ngIf="employeeFormGroup.controls.place?.errors?.required && savestatus"
+                                class="txt-danger">*</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <label class="control-label col-12" for="society">Contact Number</label>
+                        <div class="col-12">
+                            <input type="text" class="form-control" formControlName="contactnumber"
+                                Placeholder="Enter the contact Number" />
+                            <!-- <label *ngIf="employeeFormGroup.controls.contactnumber?.errors?.required && savestatus"
+                                class="txt-danger">*</label>
+                            <label *ngIf="employeeFormGroup.controls.contactnumber?.errors?.pattern && savestatus"
+                                class="txt-danger">Phone number must contain 10 digits</label> -->
+                        </div>
+                    </div>
+                    <br>
+           
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-danger" (click)="onEditSubmit()"
+                                rounded="true">Update</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-danger" (click)="onDeleteSubmit()"
+                                rounded="true">Delete</button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
+<router-outlet></router-outlet>
+    </div>
+    
+    </section>
